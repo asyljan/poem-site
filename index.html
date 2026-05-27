@@ -47,3 +47,90 @@
 </p>
 
 </div>
+
+    <!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8">
+<title>Өлеңдер</title>
+
+<style>
+body {
+    font-family: Arial;
+    background: #4facfe;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.poem {
+    display: none;
+    background: rgba(255,255,255,0.15);
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>📖 Өлеңдер жинағы</h1>
+
+<button onclick="showPoems('love')">
+❤️ Махаббат
+</button>
+
+<button onclick="showPoems('country')">
+🌍 Ел туралы
+</button>
+
+<!-- Махаббат өлеңі -->
+<div class="poem love">
+<h2>Махаббат</h2>
+
+<p>
+Сүйем сені жүректің үнімен,<br>
+Арман болып қалдың менің түнімде.
+</p>
+</div>
+
+<!-- Ел туралы өлең -->
+<div class="poem country">
+<h2>Елім</h2>
+
+<p>
+Туған жерім — алтын бесігім,<br>
+Сенде өтті менің есігім.
+</p>
+</div>
+
+<script>
+function showPoems(category) {
+
+    let poems = document.querySelectorAll('.poem');
+
+    poems.forEach(poem => {
+        poem.style.display = 'none';
+    });
+
+    let selected = document.querySelectorAll('.' + category);
+
+    selected.forEach(poem => {
+        poem.style.display = 'block';
+    });
+}
+</script>
+
+</body>
+</html>
